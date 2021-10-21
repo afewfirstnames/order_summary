@@ -35,6 +35,10 @@ body {
   background-image: url("/images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
@@ -75,7 +79,7 @@ h2,
 
 .container {
   width: 90%;
-  margin: 8em auto;
+  /* margin: 8em auto; */
   max-width: 400px;
 }
 
@@ -133,13 +137,5 @@ h2,
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    margin: 0;
   }
 }
