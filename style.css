@@ -53,6 +53,23 @@ p {
   margin: 0;
 }
 
+.flow-content > * + * {
+  margin-top: var(--flow, 1em);
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Typography */
+
 h2,
 .accent {
   color: var(--dark-blue);
@@ -68,21 +85,7 @@ h2,
   text-decoration: none;
 }
 
-.flow-content > * + * {
-  margin-top: var(--flow, 1em);
-}
-
-.split {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container {
-  width: 90%;
-  /* margin: 8em auto; */
-  max-width: 400px;
-}
+/* Main Content */
 
 .summary-wrapper {
   background-color: white;
