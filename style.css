@@ -1,0 +1,145 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral Colors */
+  --v-pale-blue: hsl(225, 100%, 98%);
+  --d-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* Margin */
+  --flow: 1em;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--d-blue);
+  margin: 0;
+  background-image: url("/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 1.4em 1.4em 0 0;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+h2,
+.accent {
+  color: var(--dark-blue);
+}
+
+.link {
+  color: var(--bright-blue);
+  font-size: 0.9rem;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: none;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow, 1em);
+}
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 8em auto;
+  max-width: 400px;
+}
+
+.summary-wrapper {
+  background-color: white;
+  padding: 2em;
+  text-align: center;
+  border-radius: 0 0 1.4em 1.4em;
+}
+
+.plan {
+  background-color: var(--v-pale-blue);
+  padding: 1em;
+  border-radius: 0.75em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--bright-blue);
+  color: #fff;
+  padding: 1em;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 0.75em;
+  margin: 0.75em 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.7;
+}
+
+.cancel-btn {
+  text-decoration: none;
+  color: var(--d-blue);
+  font-weight: 700;
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    margin: 0;
+  }
+}
